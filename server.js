@@ -29,8 +29,8 @@ if (process.env.NODE_ENV === 'production') {
   console.log('__dirname: ', __dirname)
 } else {
   const corsOptions = {
-      origin: ['http://127.0.0.1:5173', 'http://localhost:5174'],
-      credentials: true
+    origin: ['http://127.0.0.1:5173', 'http://localhost:5174'],
+    credentials: true
   }
   app.use(cors(corsOptions))
 }
@@ -85,7 +85,15 @@ router.post("/contact", (req, res) => {
 
 
 app.get('/**', (req, res) => {
-  res.sendFile(path.resolve('dist/index.html'))
-})
+  console.log('Request received for index.html');
+  res.sendFile(path.resolve('dist/index.html'), (err) => {
+    if (err) {
+      console.error('Error sending index.html:', err);
+    } else {
+      console.log('Index.html sent successfully');
+    }
+  });
+});
+
 
 server.listen(port, () => console.log(`Server Running on port ${port}`));

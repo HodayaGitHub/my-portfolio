@@ -24,6 +24,7 @@
     "react-router-hash-link": "^2.4.3",
     "web-vitals": "^2.1.4"
   },
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
