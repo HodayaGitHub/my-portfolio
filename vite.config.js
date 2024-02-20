@@ -9,5 +9,9 @@ export default defineConfig(({ mode }) => {
       'process.env': env
     },
     plugins: [react()],
+    build: {
+      outDir: './server/public',
+      emptyOutDir: true
+    }
   }
 })
