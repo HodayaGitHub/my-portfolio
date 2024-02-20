@@ -58,16 +58,21 @@ router.post("/contact", (req, res) => {
 // const server = http.createServer(expressApp);
 const port = process.env.PORT || 4000;
 
-expressApp.get('/**', (req, res) => {
-  console.log('Request received for index.html');
-  res.sendFile(path.resolve('dist/index.html'), (err) => {
-    if (err) {
-      console.error('Error sending index.html:', err);
-    } else {
-      console.log('Index.html sent successfully');
-    }
-  });
-});
+
+expressApp.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+// expressApp.get('/**', (req, res) => {
+//   console.log('Request received for index.html');
+//   res.sendFile(path.resolve('dist/index.html'), (err) => {
+//     if (err) {
+//       console.error('Error sending index.html:', err);
+//     } else {
+//       console.log('Index.html sent successfully');
+//     }
+//   });
+// });
 
 
 
