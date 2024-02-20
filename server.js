@@ -8,20 +8,6 @@ import { fileURLToPath } from 'url';
 
 const expressApp = express();
 const expressRouter = express.Router();
-const corsOptions = {
-  origin: ['http://127.0.0.1:5173', 'http://localhost:5174'],
-  credentials: true
-};
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-if (process.env.NODE_ENV === 'production') {
-  expressApp.use(express.static(path.resolve(__dirname, 'dist')));
-  console.log('__dirname: ', __dirname);
-} else {
-  expressApp.use(cors(corsOptions));
-}
 
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
@@ -69,6 +55,8 @@ router.post("/contact", (req, res) => {
   });
 });
 
+// const server = http.createServer(expressApp);
+const port = process.env.PORT || 4000;
 
 expressApp.get('/**', (req, res) => {
   console.log('Request received for index.html');
@@ -81,7 +69,6 @@ expressApp.get('/**', (req, res) => {
   });
 });
 
-const server = http.createServer(expressApp);
-const port = process.env.PORT || 5000;
 
-server.listen(port, () => console.log(`Server Running on port ${port}`));
+
+expressApp.listen(port, () => console.log(`Server Running on port ${port}`));
