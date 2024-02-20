@@ -4,6 +4,10 @@ import express from 'express';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
 const expressApp = express();
 const expressRouter = express.Router();
 
@@ -55,17 +59,19 @@ console.log(process.env.EMAIL_PASS);
 
 // const server = http.createServer(expressApp);
 const port = process.env.PORT || 4000;
+expressApp.use(express.static(path.resolve(__dirname, 'public'), { type: 'module' }));
 
-expressApp.get('/**', (req, res) => {
-  console.log('Request received for index.html');
-  res.sendFile(path.resolve('public/index.html'), (err) => {
-    if (err) {
-      console.error('Error sending index.html:', err);
-    } else {
-      console.log('Index.html sent successfully');
-    }
-  });
-});
+
+// expressApp.get('/**', (req, res) => {
+//   console.log('Request received for index.html');
+//   res.sendFile(path.resolve('public/index.html'), (err) => {
+//     if (err) {
+//       console.error('Error sending index.html:', err);
+//     } else {
+//       console.log('Index.html sent successfully');
+//     }
+//   });
+// });
 
 
 
