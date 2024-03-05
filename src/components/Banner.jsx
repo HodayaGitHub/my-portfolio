@@ -59,14 +59,16 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi! I'm Hodaya`} <span className="txt-rotate" dataperiod="1000" data-rotate='["Full-stack Developer", "Web Developer", "Front-end"]'><span className="wrap">{text}</span></span></h1>
-                  <p>My fullname is Hodaya Ovadia.I am a Fullstack web developer. I can make the website more, more interactive with web animation
-                    I study at Web Brain Academy group G5. When I first came to web brain, I had no knowledge of programming.
-                    But now with the help of strong aspirations and teachers, my level of knowledge has greatly increased and I can freely create web site views that are used in our daily lives
+                  <p>
+                    I began my professional adventure as a teacher, bringing knowledge to eager minds.
+                    From there, I took a surprising leap into the realm of Quality Assurance (QA), ensuring the seamless functionality of digital creations.
+                    Now, I've evolved into a dynamic Full Stack Developer,
+                    merging my diverse experiences to craft innovative solutions and bring ideas to life!
                   </p>
                   <Router>
-                  <HashLink to='#connect'>
-                    <button>Let’s Connect <ArrowRightCircle size={25} /></button>
-                  </HashLink>
+                    <HashLink to='#connect'>
+                      <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                    </HashLink>
                   </Router>
 
                 </div>}

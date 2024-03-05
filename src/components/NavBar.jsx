@@ -29,6 +29,10 @@ export function NavBar() {
     setActiveLink(value);
   }
 
+  function openWebsiteInNewTab(websiteUrl) {
+    window.open(websiteUrl, "_blank");
+  };
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -66,8 +70,12 @@ export function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={linkedin} alt="" /></a>
-                <a href="#"><img src={github} alt="" /></a>
+                <span onClick={() => openWebsiteInNewTab('https://www.linkedin.com/in/hodaya-ovadia-8402889a/')}>
+                  <img src={linkedin} alt="" />
+                </span>
+                <span onClick={() => openWebsiteInNewTab('https://www.linkedin.com/in/hodaya-ovadia-8402889a/')}>
+                  <img src={github} alt="" />
+                </span>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

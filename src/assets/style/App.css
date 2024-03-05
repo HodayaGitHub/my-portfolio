@@ -155,7 +155,8 @@ span.navbar-text {
   margin-left: 14px;
 }
 
-.social-icon a {
+.social-icon a,
+.social-icon span {
   width: 42px;
   height: 42px;
   background: rgba(217, 217, 217, 0.1);
@@ -168,7 +169,8 @@ span.navbar-text {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.social-icon a::before {
+.social-icon a::before,
+.social-icon span::before {
   content: "";
   width: 42px;
   height: 42px;
@@ -179,17 +181,20 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 
-.social-icon a:hover::before {
+.social-icon a:hover::before,
+.social-icon span:hover::before {
   transform: scale(1);
 }
 
-.social-icon a img {
+.social-icon a img,
+.social-icon span img {
   width: 40%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
 
-.social-icon a:hover img {
+.social-icon a:hover img,
+.social-icon span:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
@@ -321,6 +326,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  text-align: justify;
 }
 
 .banner button {
@@ -625,7 +631,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
-  border-radius: 0;
+  border-radius: 15px;
   position: relative;
   transition: 0.3s ease-in-out;
 }
@@ -653,6 +659,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form button:hover::before {
   width: 100%;
+  border-radius: inherit;
 }
 
 /************ Footer Css ************/
