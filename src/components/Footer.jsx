@@ -1,9 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { MailchimpForm } from "./MailchimpForm";
 import logo from '../assets/img/astronaut.png';
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import linkedin from "../assets/img/linkedin.svg";
+import github from "../assets/img/github.svg";
 
 export const Footer = () => {
   return (
@@ -16,11 +15,9 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
+              <a href="#"><img src={linkedin} alt="Icon" /></a>
+              <a href="#"><img src={github} alt="Icon" /></a>
             </div>
-            <p>Thank you for attention</p>
           </Col>
         </Row>
       </Container>

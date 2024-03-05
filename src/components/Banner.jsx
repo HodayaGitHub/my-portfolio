@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router } from "react-router-dom";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
+import headerImg from "../assets/img/header-img.svg";
 import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -61,7 +63,12 @@ export const Banner = () => {
                     I study at Web Brain Academy group G5. When I first came to web brain, I had no knowledge of programming.
                     But now with the help of strong aspirations and teachers, my level of knowledge has greatly increased and I can freely create web site views that are used in our daily lives
                   </p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <Router>
+                  <HashLink to='#connect'>
+                    <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </HashLink>
+                  </Router>
+
                 </div>}
             </TrackVisibility>
           </Col>

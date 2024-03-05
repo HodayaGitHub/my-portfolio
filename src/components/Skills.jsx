@@ -1,6 +1,3 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import jsImage from "../assets/img/skills/js.png";
 import cssImage from "../assets/img/skills/css.png";
 import reactImage from "../assets/img/skills/react.png";
@@ -95,15 +92,14 @@ export function Skills() {
     },
   ];
 
-
   return (
     <section className="skill" id="skills">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>About Skills</h2>
-              <p>I have learned different programming languages ​​so far and as far as my skills are concerned<br></br></p>
+              <h2>Skills</h2>
+              <p>My journey through different programming languages has sculpted a versatile skill set, underscoring a commitment to continuous improvement in the coding realm.<br></br></p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
 
                 {CarouselItems.map((item, index) => (
