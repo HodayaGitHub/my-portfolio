@@ -73,7 +73,7 @@ export function NavBar() {
                 <span onClick={() => openWebsiteInNewTab('https://www.linkedin.com/in/hodaya-ovadia-8402889a/')}>
                   <img src={linkedin} alt="" />
                 </span>
-                <span onClick={() => openWebsiteInNewTab('https://www.linkedin.com/in/hodaya-ovadia-8402889a/')}>
+                <span onClick={() => openWebsiteInNewTab('https://github.com/HodayaGitHub')}>
                   <img src={github} alt="" />
                 </span>
               </div>

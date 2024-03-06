@@ -4,6 +4,10 @@ import logo from '../assets/img/astronaut.png';
 import linkedin from "../assets/img/linkedin.svg";
 import github from "../assets/img/github.svg";
 
+function openWebsiteInNewTab(websiteUrl) {
+  window.open(websiteUrl, "_blank");
+};
+
 export const Footer = () => {
   return (
     <footer className="footer">
@@ -15,8 +19,12 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={linkedin} alt="Icon" /></a>
-              <a href="#"><img src={github} alt="Icon" /></a>
+              <span onClick={() => openWebsiteInNewTab('https://www.linkedin.com/in/hodaya-ovadia-8402889a/')}>
+                <img src={linkedin} alt="" />
+              </span>
+              <span onClick={() => openWebsiteInNewTab('https://github.com/HodayaGitHub')}>
+                <img src={github} alt="" />
+              </span>
             </div>
           </Col>
         </Row>
