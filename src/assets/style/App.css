@@ -227,7 +227,7 @@ span.navbar-text {
 }
 
 .navbar-text button:hover {
-  color: #121212;
+  color: #a450ca;
 }
 
 .navbar-text button:hover::before {

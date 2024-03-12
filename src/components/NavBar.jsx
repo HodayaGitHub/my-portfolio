@@ -37,7 +37,7 @@ export function NavBar() {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="#home">
             <img src={logo} />
             Hodaya
           </Navbar.Brand>
