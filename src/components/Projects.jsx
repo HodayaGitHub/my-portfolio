@@ -5,7 +5,7 @@ import shopWorld from "../assets/img/shop-world-img.png";
 import appsus from "../assets/img/appsus1.png";
 import MineSweeper from "../assets/img/mine-sweeper.png";
 import memeGen from "../assets/img/meme-gen.png";
-import projImg6 from "../assets/img/12345.jpg";
+import dashboard from "../assets/img/dashboard-img.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -44,8 +44,10 @@ export const Projects = () => {
       websiteUrl: 'https://hodayagithub.github.io/memeGen'
     },
     {
-      description: "Design & Development",
-      imgUrl: projImg6,
+      title: "Ad Campaign Manager",
+      description: "Ad Campaign Manager with CRUD and filtering options",
+      imgUrl: dashboard,
+      websiteUrl: 'https://ad-campaign-manager.onrender.com/'
     },
   ];
 
